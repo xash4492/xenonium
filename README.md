@@ -17,7 +17,7 @@ const { gen } = require("xenonium");
 ```js
 const xenonium = require("xenonium")
 ```
-- Then call the gen() function, passing in the number of codes to generate (optional, defaults to 1000000), the code length (optional, defaults to 16), and the file path to save the codes to (optional, defaults to "db/cd.json"):
+- Then call the gen() function, passing in the number of codes to generate (optional, defaults to 1000000), the code length (optional, defaults to 16), and the file path to save the codes to (optional, defaults to "xenoniumCodes.json"):
 ```js
 gen(500000, 20, "myCodes.json");
 ```
