@@ -1,4 +1,4 @@
-# xenonium 👽
+# xenonium v1 👽
 A fast and reliable code generator.
 ___
 ## Installation
@@ -17,13 +17,13 @@ const { gen } = require("xenonium");
 ```js
 const xenonium = require("xenonium")
 ```
-- Then call the gen() function, passing in the number of codes to generate (optional, defaults to 1000000), the code length (optional, defaults to 16), and the file path to save the codes to (optional, defaults to "xenoniumCodes.json"):
+- Then call the gen() function, passing in the number of codes to generate (optional, defaults to 100k), and the file path to save the codes to (optional, defaults to "xenoniumCodes.json"), the code length (optional, defaults to 16):
 ```js
-gen(500000, 20, "myCodes.json");
+gen(numberOfCodes, "path", codeLength);
 ```
 **OR**
 ```js
-xenonium.gen(500000, 20, "myCodes.json");
+xenonium.gen(numberOfCodes, "path", codeLength);
 ```
 ### 2. Constructor
 To use the Generator class to generate random codes and save them to a JSON file, you can do the following:
@@ -37,15 +37,17 @@ const xenonium = require("xenonium")
 ```
 - Then create an instance of the Generator class by passing in a code length (optional, defaults to 16):
 ```js
-const x = new Generator(20);
+const x = new Generator(codeLength);
 ```
 **OR**
 ```js
-const x = new xenonium.Generator(20)
+const x = new xenonium.Generator(codeLength)
 ```
 - Lastly call the gen() method on the generator instance, passing in the number of codes to generate (optional, defaults to 1000000) and the file path to save the codes to (optional, defaults to "xenoniumCodes.json"):
 ```js
-x.gen(500000, "myCodes.json");
+x.gen(numberOfCodes, "path");
 ```
+## Inquiries
+If you have any question feel free to create an issue or DM me on Discord (xash#7733) :)
 ## License
 This package is licensed under the MIT License. See the LICENSE file for more information.
