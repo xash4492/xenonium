@@ -1,0 +1,33 @@
+{
+  "name": "xenonium",
+  "version": "1.0.4",
+  "description": "A fast and reliable code generator.",
+  "main": "xenonium.js",
+  "dependencies": {
+    "fs": "^0.0.2",
+    "xenonium": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xash4492/xenonium.git"
+  },
+  "keywords": [
+    "xenonium",
+    "xenoniumgen",
+    "codegen",
+    "gen",
+    "code-generator",
+    "nitro",
+    "nitrogen",
+    "uuid"
+  ],
+  "author": "xash4492",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xash4492/xenonium/issues"
+  },
+  "homepage": "https://github.com/xash4492/xenonium#readme"
+}
