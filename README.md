@@ -29,7 +29,7 @@ xenonium.gen(numberOfCodes, "path", codeLength);
 To use the Generator class to generate random codes and save them to a JSON file, you can do the following:
 - Import the Generator class from the xenonium package:
 ```js
-const { Generator } = require("xenonium");
+const { Fabricator } = require("xenonium");
 ```
 **Alternativly you can just import xenonium by:**
 ```js
@@ -37,11 +37,11 @@ const xenonium = require("xenonium")
 ```
 - Then create an instance of the Generator class by passing in a code length (optional, defaults to 16):
 ```js
-const x = new Generator(codeLength);
+const x = new Fabricator(codeLength);
 ```
 **OR**
 ```js
-const x = new xenonium.Generator(codeLength)
+const x = new xenonium.Fabricator(codeLength)
 ```
 - Lastly call the gen() method on the generator instance, passing in the number of codes to generate (optional, defaults to 1000000) and the file path to save the codes to (optional, defaults to "xenoniumCodes.json"):
 ```js
