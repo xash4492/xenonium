@@ -1,52 +1,57 @@
-# xenonium v1 👽 (MORE OPTIONS COMING SOON)
-A fast and reliable code generator.
-___
+# (xenonium v2 👽 (SALT OPTION))[https://github.com/xash4492/xenonium]
+
 ## Installation
-To use this package, you first need to install it by running the following command:
-```
-npm install xenonium
-```
+To install the Xenonium package in your project, use the following command:
+
+```npm install xenonium```
+
+
 ## Usage
-### 1. Direct
-You can use the gen() function exported by the xenonium package to generate random codes without creating an instance of the Generator class by:
-- Importing the gen function from the xenonium package:
+Firstly, import the Xenonium module in your Node.js project using:
+
+```const xenonium = require("xenonium");```
+
+
+You can now use the following options:
+
+### Option 1: Using the Fabricator Class
+To use the Fabricator class, create a new instance of it and customize it as per your requirements, and generate the codes using the gen() method. Here is an example code:
+
 ```js
-const { gen } = require("xenonium");
+// Create a new Fabricator
+const fab = new xenonium.Fabricator();
 ```
-**Alternativly you can just import xenonium by:**
+
 ```js
-const xenonium = require("xenonium")
+// Generate the codes
+fab.gen(/* Number of Codes, Default is 100000 */, /* File Path, Default is "xenoniumCodes.json" */);
 ```
-- Then call the gen() function, passing in the number of codes to generate (optional, defaults to 100k), and the file path to save the codes to (optional, defaults to "xenoniumCodes.json"), the code length (optional, defaults to 16):
+
+Optionally, you can set the salt value and code length like this:
+
 ```js
-gen(numberOfCodes, "path", codeLength);
+// Set the salt value
+fab.salt(/* Salt, Default is "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" */);
 ```
-**OR**
 ```js
-xenonium.gen(numberOfCodes, "path", codeLength);
+// Set the code length
+fab.codeLength(/* Code Length, Default is 16 */);
 ```
-### 2. Constructor
-To use the Generator class to generate random codes and save them to a JSON file, you can do the following:
-- Import the Generator class from the xenonium package:
+
+### Option 2: Using the Utility Function
+You can also use the gen() utility function directly to generate codes. This is useful when you need a quick one-time solution for generating codes without the need for customization. Here is an example code:
+
 ```js
-const { Fabricator } = require("xenonium");
+xenonium.gen(/* Number of Codes, Default is 100000 */, /* File Path, Default is "xenoniumCodes.json" */, /* Code Length, Default is 16 */);
 ```
-**Alternativly you can just import xenonium by:**
+
+
+Optionally, you can set the salt value like this:
+
 ```js
-const xenonium = require("xenonium")
+xenonium.gen(/* Number of Codes, Default is 100000 */, /* File Path, Default is "xenoniumCodes.json" */, /* Code Length, Default is 16 */).salt(/* Salt, Default is "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" */);
 ```
-- Then create an instance of the Generator class by passing in a code length (optional, defaults to 16):
-```js
-const x = new Fabricator(codeLength);
-```
-**OR**
-```js
-const x = new xenonium.Fabricator(codeLength)
-```
-- Lastly call the gen() method on the generator instance, passing in the number of codes to generate (optional, defaults to 1000000) and the file path to save the codes to (optional, defaults to "xenoniumCodes.json"):
-```js
-x.gen(numberOfCodes, "path");
-```
+
 ## Inquiries
 If you have any question feel free to create an issue or DM me on Discord (xash#7733) :)
 ## License
