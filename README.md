@@ -1,4 +1,4 @@
-# (xenonium v2 👽 (SALT OPTION))[https://github.com/xash4492/xenonium]
+# [xenonium v2 👽 (SALT OPTION)](https://npmjs.org/package/xenonium)
 
 ## Installation
 To install the Xenonium package in your project, use the following command:
