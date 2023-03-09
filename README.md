@@ -9,7 +9,9 @@ To install the Xenonium package in your project, use the following command:
 ## Usage
 Firstly, import the Xenonium module in your Node.js project using:
 
-```const xenonium = require("xenonium");```
+```js
+const xenonium = require("xenonium");
+```
 
 
 You can now use the following options:
